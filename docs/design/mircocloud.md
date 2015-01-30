@@ -1,4 +1,5 @@
-This is a proposal for Kubernetes to support a single node model, a Micro Cloud Node (MCN). In this configuration, the master, as well as the minion, reside on the same node. Weighted pods are distributed into MCNs in which the master communicates with a locally running Kubelet to manage pods within the minion running on the same node.
+# Kubernetes Micro Cloud Node (MCN)
+This is a proposal for Kubernetes to support a single node model, a Micro Cloud Node (MCN). A farm of MCNs is used to scale beyond a single MCN. In this configuration, the master, as well as the minion, reside on the same node. Weighted pods are distributed into MCNs in which the master communicates with a locally running Kubelet to manage pods within the minion running on the same node.
 
 All Kubernetes cluster management network traffic is kept inside the MCN, keeping cluster management network chatter all internal, reducing additional complexities and security considerations when managing minions remotely.
 
